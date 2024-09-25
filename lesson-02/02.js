@@ -7,13 +7,13 @@
 * Для успешного прохождения тестов не меняйте названия переменных! 
 */ 
  
-let dice1 = Math.floor(Math.random() * 7) 
-let dice2 = Math.floor(Math.random() * 7) 
+let dice1 = Math.floor(Math.random() * 6) 
+let dice2 = Math.floor(Math.random() * 6) 
 let isWinningDouble 
  
 if (dice1 === dice2 && dice1 > 3 && dice2 > 3){ 
   isWinningDouble = true 
-} 
+} else {isWinningDouble = false}
  
 console.log('Первый бросок: ' + dice1) 
 console.log('Второй бросок: ' + dice2) 
