@@ -19,3 +19,4 @@ function doubleEachCharacter (str){
     } 
     return newStr; 
 }
+
