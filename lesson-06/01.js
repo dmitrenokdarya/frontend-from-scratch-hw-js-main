@@ -21,26 +21,25 @@ const WEB_TECH_IMAGES = [
 
 
 const nextButton = document.getElementById('next-button');
-let i = 0;
-let img = document.getElementById('web-tech-image');
-
-nextButton.addEventListener('click', function () {
-      if (i < WEB_TECH_IMAGES.length - 1) {
-        img.src = WEB_TECH_IMAGES[i];
-        i++;
-      } else if (i = WEB_TECH_IMAGES.length - 1) {
-        img.src = WEB_TECH_IMAGES[i];
-        i = 0;}
-});
-
 const prevButton = document.getElementById('prev-button');
-prevButton.addEventListener('click', function () {
-  if (i < WEB_TECH_IMAGES.length && i >= 0) {
-    img.src = WEB_TECH_IMAGES[i];
-    i--;
-  } else if (i < 0) {
-    i = WEB_TECH_IMAGES.length - 1;
-    img.src = WEB_TECH_IMAGES[i];
-  }
-});
+const imgCount = WEB_TECH_IMAGES.length;
+let img = document.getElementById('web-tech-image')
+let imgIndex = 0;
+
+// Устанавливаем обработчики событий для кнопок
+prevButton.addEventListener('click', showPreviousImg);
+nextButton.addEventListener('click', showNextImg);
+
+// Функция для показа предыдущего слайда
+function showPreviousImg() {
+  imgIndex = (imgIndex - 1 + imgCount) % imgCount;
+  img.src = WEB_TECH_IMAGES[imgIndex];
+}
+
+// Функция для показа следующего слайда
+function showNextImg() {
+  imgIndex = (imgIndex + 1) % imgCount;
+  img.src = WEB_TECH_IMAGES[imgIndex];
+}
+
 
