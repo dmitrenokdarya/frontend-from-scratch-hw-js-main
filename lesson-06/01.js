@@ -32,13 +32,13 @@ nextButton.addEventListener('click', showNextImg);
 
 // Функция для показа предыдущего слайда
 function showPreviousImg() {
-  imgIndex = (imgIndex - 1 + imgCount) % imgCount;
+  imgIndex = (imgIndex - 1 + imgCount) % imgCount; //(1 - 1 + 3) % 3 = 3 % 3 = 0
   img.src = WEB_TECH_IMAGES[imgIndex];
 }
 
 // Функция для показа следующего слайда
 function showNextImg() {
-  imgIndex = (imgIndex + 1) % imgCount;
+  imgIndex = (imgIndex + 1) % imgCount; //(0 + 1) % 3 = 1 % 3 = 10 % 3 = 1
   img.src = WEB_TECH_IMAGES[imgIndex];
 }
 
