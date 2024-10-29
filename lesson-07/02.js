@@ -4,7 +4,7 @@
  */
 
 function isNumeric(str) {
-  if (!isNaN(str) && str > 0) {
+  if (!isNaN(str) && str > 0 || str < 0) {
     return true;
   } else { return false; }
 }
