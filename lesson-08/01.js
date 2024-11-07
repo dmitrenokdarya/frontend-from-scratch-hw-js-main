@@ -62,9 +62,20 @@ function updateCartDisplay() {
   }
 }
 
+// Очистка корзины
 clearCartButton.addEventListener('click', function () {
   cart.length = 0
+  messageBox.innerText = ''
   updateCartDisplay()
 })
 
 // Твой код:
+
+petShop.addEventListener('click', ()=>{
+  if (cart.length < 3) {
+    cart.push(event.target.id);
+    updateCartDisplay();
+  } else {
+    messageBox.innerText = 'Вы не можете добавить более 3 питомцев'
+    }
+})

@@ -43,3 +43,5 @@ function showNextImg() {
 }
 
 
+infobox.background 
+
